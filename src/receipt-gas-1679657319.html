@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
+    xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="ProgId" content="Excel.Sheet" />
+    <meta name="Generator" content="Aspose.Cell 23.3.3" />
+    <link rel="File-List" href="_files_files/filelist.xml" />
+    <link rel="Edit-Time-Data" href="_files_files/editdata.mso" />
+    <link rel="OLE-Object-Data" href="_files_files/oledata.mso" />
+    <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+</o:DocumentProperties>
+</xml><![endif]-->
+    <style>
+        ruby {
+            ruby-align: left;
+        }
+
+        .style0 {
+            text-align: general;
+            vertical-align: middle;
+            white-space: nowrap;
+            background: auto;
+            color: #000000;
+            font-size: 10pt;
+            font-weight: 400;
+            font-style: normal;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            font-size: 13px !important;
+            background-color: aliceblue;
+            margin-top: 60px;
+        }
+
+        td {
+            text-align: general;
+            vertical-align: middle;
+            white-space: nowrap;
+            background: auto;
+            color: #000000;
+            font-size: 10pt;
+            font-weight: 400;
+            font-style: normal;
+            font-family: Arial, sans-serif;
+        }
+
+        .x15 {
+            text-align: general;
+            vertical-align: middle;
+            white-space: nowrap;
+            background: auto;
+            color: #000000;
+            font-size: 10pt;
+            font-weight: 400;
+            font-style: normal;
+            font-family: Arial, sans-serif;
+        }
+
+        .x21 {
+            text-align: general;
+            vertical-align: middle;
+            white-space: nowrap;
+            background: auto;
+            color: #000000;
+            font-size: 10pt;
+            font-weight: 400;
+            font-style: normal;
+            font-family: Arial, sans-serif;
+        }
+
+        .x22 {
+            text-align: general;
+            vertical-align: middle;
+            white-space: nowrap;
+            background: auto;
+            color: #000000;
+            font-size: 10pt;
+            font-weight: 400;
+            font-style: normal;
+            font-family: Arial, sans-serif;
+        }
+
+        .x23 {
+            text-align: general;
+            vertical-align: middle;
+            white-space: nowrap;
+            background: auto;
+            color: #000000;
+            font-size: 10pt;
+            font-weight: 400;
+            font-style: normal;
+            font-family: Arial, sans-serif;
+        }
+
+        .right_col {
+            margin-left: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body link='blue' class="wrapper" vlink='purple'>
+    <script>
+        function pad(num, size) {
+            let s = "000" + num;
+            return s.substr(s.length - size);
+        }
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function myFunction() {
+            let characters = 'ABCDEFGHIJ'
+            document.getElementById("billNo").value = characters.charAt(Math.floor(Math.random() * characters.length)) + (Math.floor(Math.random() * 10000) + 10000);
+            let hr = Math.floor(Math.random() * 18 + 5);
+            let min = Math.floor(Math.random() * 59);
+            let den = getRandomInt(729, 735) + "." + getRandomInt(0, 9) + "Kg/Cu.mtr";
+            document.getElementById("timeId").value = pad(hr, 2) + ":" + pad(min, 2);
+            document.getElementById("localVal").innerHTML = document.getElementById("localId").value;
+            document.getElementById("nozelVal").innerHTML = "0" + (Math.floor(Math.random() * 4) + 1);
+            document.getElementById("dateVal").innerHTML = document.getElementById("dateId").value;
+            document.getElementById("timeVal").innerHTML = document.getElementById("timeId").value;
+            document.getElementById("volVal").innerHTML = pad(document.getElementById("volId").value, 6);
+            document.getElementById("rateVal").innerHTML = document.getElementById("rateId").value;
+            let num = document.getElementById("volId").value * document.getElementById("rateId").value;
+            num = num.toFixed(2);
+            document.getElementById("amtVal").innerHTML = pad(num, 8);
+            document.getElementById("billVal1").innerHTML = document.getElementById("billNo").value;
+            // document.getElementById("fipVal").innerHTML = pad(getRandomInt(1, 2), 2);
+            document.getElementById('addressVal').innerHTML = document.getElementById("addressId").value;
+            document.getElementById('regNoVal').innerHTML = document.getElementById('regNoId').value;
+            document.getElementById("denVal").innerHTML = den;
+            window.alert("done");
+        }
+    </script>
+
+    <div
+        style="position:absolute;left:10%;padding:2%;margin-left:-121px;top:0px;width:312px;height:300px;border-style:groove;overflow:hidden;background-color: #bbbab5;top:10%;">
+        <div> Bill No....<input id="billNo" type="text" value="B6923" /> </div> </br>
+        <div> Local Id...<input id="localId" type="text" value="016414" /> </div> </br>
+        <div> Date........<input id="dateId" type="text" value="31/01/21" /> </div> </br>
+        <div> Time.......<input id="timeId" type="text" value="12:21" /> </div> </br>
+        <div> Vol.........<input id="volId" type="text" value='15.00' /> </div> </br>
+        <div> Rate........<input id="rateId" type="text" value='092.52' /> </div> </br>
+        <div> Vehilcle No...<input id="regNoId" type="text" value='CA 8007' /> </div> </br>
+        <div> Address.......<input id="addressId" type="text" value="128-A, Kamani Rd, Jhotwara Industrial Area,
+            Jhotwara, Jaipur,
+            Rajasthan 302012"> </div>
+        <div> <input id="setBut" type="button" value='Set Values' onclick="myFunction()"
+                style='background:green;color:white' /> </div> </br>
+    </div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="/src/logo.png" />
+        <p id="addressVal" style="max-width:220px; text-align: center; font-size: 14px;">128-A, Kamani Rd, Jhotwara
+            Industrial Area,
+            Jhotwara, Jaipur,
+            Rajasthan 302012</p>
+        <table border='0' cellpadding='0' cellspacing='0' width='250' style='border-collapse: 
+    collapse;table-layout:fixed;width:184pt; margin-left: 25px;'>
+            <span style="text-align: center; font-size: 18px;">ORIGINAL</span>
+            <span style="text-align: center; margin-bottom: 10px;">***********************************</span>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span id="dateVal">28-Feb-2023</span>
+                    </div>
+                </td>
+                <td class='x23' align='left' x:num='4'> <span id="timeVal">19:16:40</span></td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>TXN NO.</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col" id="localVal">N.A.</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>INVOICE NO.</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span id="billVal1" class="right_col">230515</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>VEHICLE NO.</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col" id="regNoVal">CA 8007</span> </td>
+            </tr>
+        </table>
+        <span style="text-align: center; margin-bottom: 10px;">***********************************</span>
+        <table border='0' cellpadding='0' cellspacing='0' width='250'
+            style='border-collapse: collapse;table-layout:fixed;width:184pt;margin-left: 25px;'>
+
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>NOZZLE NO</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col" id="nozelVal">02</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>PRODUCT</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col">Product 1</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>DENSITY</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col" id="denVal">735 kg/m3</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>VOLUME</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span id='volVal' class="right_col">26.9 Ltr</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>RATE</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col" id="rateVal">&#x20B9; 108.42 P/L</span> </td>
+            </tr>
+            <tr height='17' style='height:12.75pt'>
+                <td height='17' style='height:12.75pt;'>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>TOTAL SALE</span>
+                        <span>:</span>
+                    </div>
+                </td>
+                <td><span class="right_col" id="amtVal">&#x20B9;2916.49</span> </td>
+            </tr>
+        </table>
+        <span style="text-align: center;">***********************************</span>
+        <p style='text-align: center;  margin:20px;'><b>THANK YOU! Visit Again</b></p>
+    </div>
+
+</body>
+
+</html>
