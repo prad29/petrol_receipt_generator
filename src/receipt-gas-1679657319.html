@@ -116,24 +116,28 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         function myFunction() {
+            const addresses = ["Ground Floor, near Amarpali Circle, E-Block, Block C, Vaishali Nagar, Jaipur, Rajasthan 302021", "Plot No 910 & 11, Maa Karni Nagar, Block A, Vaishali Nagar, Jaipur, Rajasthan 302021", " Plot No 4 Dp Colony, Shyam Nagar Near Shyam Nagar Metrol, Station, Jaipur, Rajasthan 302019", "Plot.No. 2 & 3, Geejgarh Vihar Main Road, Hawa Sadak Rd, Bais Godam, Jaipur, Rajasthan 302006", " 27, Shri Hans Marg, Keshav Vihar, Arjun Nagar, Jaipur, Rajasthan 302018"]
             let characters = 'ABCDEFGHIJ'
             document.getElementById("billNo").value = characters.charAt(Math.floor(Math.random() * characters.length)) + (Math.floor(Math.random() * 10000) + 10000);
             let hr = Math.floor(Math.random() * 18 + 5);
             let min = Math.floor(Math.random() * 59);
-            let den = getRandomInt(729, 735) + "." + getRandomInt(0, 9) + "Kg/Cu.mtr";
+            let den = getRandomInt(729, 735) + "." + getRandomInt(0, 9) + " Kg/Cu.mtr";
+            let [date, time] = new Date(new Date() - Math.random(100) * 1000 * 60 * 60 * 1000).toLocaleString().split(',')
+            let volume = getRandomInt(11, 48) + '.' + getRandomInt(1, 90)
+            const address = addresses[Math.floor((Math.random() * 10) % 4)]
             document.getElementById("timeId").value = pad(hr, 2) + ":" + pad(min, 2);
-            document.getElementById("localVal").innerHTML = document.getElementById("localId").value;
+            document.getElementById("localVal").innerHTML = Math.floor(Math.random(10000) * 10000 + Math.random(9) * 1000000);
             document.getElementById("nozelVal").innerHTML = "0" + (Math.floor(Math.random() * 4) + 1);
-            document.getElementById("dateVal").innerHTML = document.getElementById("dateId").value;
-            document.getElementById("timeVal").innerHTML = document.getElementById("timeId").value;
-            document.getElementById("volVal").innerHTML = pad(document.getElementById("volId").value, 6);
+            document.getElementById("dateVal").innerHTML = date;
+            document.getElementById("timeVal").innerHTML = time;
+            document.getElementById("volVal").innerHTML = volume + " Ltr";
             document.getElementById("rateVal").innerHTML = document.getElementById("rateId").value;
-            let num = document.getElementById("volId").value * document.getElementById("rateId").value;
+            let num = volume * document.getElementById("rateId").value;
             num = num.toFixed(2);
-            document.getElementById("amtVal").innerHTML = pad(num, 8);
+            document.getElementById("amtVal").innerHTML = num;
             document.getElementById("billVal1").innerHTML = document.getElementById("billNo").value;
             // document.getElementById("fipVal").innerHTML = pad(getRandomInt(1, 2), 2);
-            document.getElementById('addressVal').innerHTML = document.getElementById("addressId").value;
+            document.getElementById('addressVal').innerHTML = address;
             document.getElementById('regNoVal').innerHTML = document.getElementById('regNoId').value;
             document.getElementById("denVal").innerHTML = den;
             window.alert("done");
