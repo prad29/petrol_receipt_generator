@@ -116,19 +116,23 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         function myFunction() {
-            const addresses = ["Ground Floor, near Amarpali Circle, E-Block, Block C, Vaishali Nagar, Jaipur, Rajasthan 302021", "Plot No 910 & 11, Maa Karni Nagar, Block A, Vaishali Nagar, Jaipur, Rajasthan 302021", " Plot No 4 Dp Colony, Shyam Nagar Near Shyam Nagar Metrol, Station, Jaipur, Rajasthan 302019", "Plot.No. 2 & 3, Geejgarh Vihar Main Road, Hawa Sadak Rd, Bais Godam, Jaipur, Rajasthan 302006", " 27, Shri Hans Marg, Keshav Vihar, Arjun Nagar, Jaipur, Rajasthan 302018"]
+            const addresses = ["11006, Durgapur Station Road, Railway Ground Rail Colony, Durgapur, West Bengal 713201",
+                               "ZONAL CENTRE, Jadabendra Panja Ave, Sagarbhanga, Durgapur, West Bengal 713211",
+                               "A ZONE,DURGAPUR, BARDHAMAN, West Bengal 713204",
+                               "12016, Rtkm/38, Akbar Rd, Prantika, Benachity, Durgapur, West Bengal 713213",
+                               "Pcbl more, Dr Bidhan Chandra Roy Avenue, P.S, Durgapur, West Bengal 713201"]
             let characters = 'ABCDEFGHIJ'
             document.getElementById("billNo").value = characters.charAt(Math.floor(Math.random() * characters.length)) + (Math.floor(Math.random() * 10000) + 10000);
             let hr = Math.floor(Math.random() * 18 + 5);
             let min = Math.floor(Math.random() * 59);
-            let den = getRandomInt(729, 735) + "." + getRandomInt(0, 9) + " Kg/Cu.mtr";
-            let [date, time] = new Date(new Date() - Math.random(100) * 1000 * 60 * 60 * 1000).toLocaleString().split(',')
-            let volume = getRandomInt(11, 48) + '.' + getRandomInt(1, 90)
+            let den = getRandomInt(780, 830) + "." + getRandomInt(0, 9) + " Kg/Cu.mtr";
+            let [date, time] = new Date(new Date() - Math.random(100) * 2000 * 60 * 60 * 1000).toLocaleString().split(',')
+            let volume = getRandomInt(30, 45) + '.' + getRandomInt(1, 90)
             const address = addresses[Math.floor((Math.random() * 10) % 4)]
             document.getElementById("timeId").value = pad(hr, 2) + ":" + pad(min, 2);
             document.getElementById("localVal").innerHTML = Math.floor(Math.random(10000) * 10000 + Math.random(9) * 1000000);
             document.getElementById("nozelVal").innerHTML = "0" + (Math.floor(Math.random() * 4) + 1);
-            document.getElementById("dateVal").innerHTML = date;
+            document.getElementById("dateVal").innerHTML = document.getElementById("dateId").value;
             document.getElementById("timeVal").innerHTML = time;
             document.getElementById("volVal").innerHTML = volume + " Ltr";
             document.getElementById("rateVal").innerHTML = document.getElementById("rateId").value;
@@ -152,7 +156,7 @@
         <div> Time.......<input id="timeId" type="text" value="12:21" /> </div> </br>
         <div> Vol.........<input id="volId" type="text" value='15.00' /> </div> </br>
         <div> Rate........<input id="rateId" type="text" value='092.52' /> </div> </br>
-        <div> Vehilcle No...<input id="regNoId" type="text" value='CA 8007' /> </div> </br>
+        <div> Vehilcle No...<input id="regNoId" type="text" value='WB 58Y 6646' /> </div> </br>
         <div> Address.......<input id="addressId" type="text" value="128-A, Kamani Rd, Jhotwara Industrial Area,
             Jhotwara, Jaipur,
             Rajasthan 302012"> </div>
@@ -226,7 +230,7 @@
                         <span>:</span>
                     </div>
                 </td>
-                <td><span class="right_col">Product 1</span> </td>
+                <td><span class="right_col">Diesel</span> </td>
             </tr>
             <tr height='17' style='height:12.75pt'>
                 <td height='17' style='height:12.75pt;'>
