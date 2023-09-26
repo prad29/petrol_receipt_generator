@@ -127,7 +127,7 @@
             let min = Math.floor(Math.random() * 59);
             let den = getRandomInt(780, 830) + "." + getRandomInt(0, 9) + " Kg/Cu.mtr";
             let [date, time] = new Date(new Date() - Math.random(100) * 2000 * 60 * 60 * 1000).toLocaleString().split(',')
-            let volume = getRandomInt(30, 45) + '.' + getRandomInt(1, 90)
+            let volume = getRandomInt(35, 45) + '.' + getRandomInt(1, 90)
             const address = addresses[Math.floor((Math.random() * 10) % 4)]
             document.getElementById("timeId").value = pad(hr, 2) + ":" + pad(min, 2);
             document.getElementById("localVal").innerHTML = Math.floor(Math.random(10000) * 10000 + Math.random(9) * 1000000);
@@ -257,7 +257,7 @@
                         <span>:</span>
                     </div>
                 </td>
-                <td><span class="right_col" id="rateVal">&#x20B9; 108.42 P/L</span> </td>
+                <td><span class="right_col" id="rateVal">&#x20B9; 92.68 P/L</span> </td>
             </tr>
             <tr height='17' style='height:12.75pt'>
                 <td height='17' style='height:12.75pt;'>
