@@ -116,18 +116,18 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         function myFunction() {
-            const addresses = ["11006, Durgapur Station Road, Railway Ground Rail Colony, Durgapur, West Bengal 713201",
-                               "ZONAL CENTRE, Jadabendra Panja Ave, Sagarbhanga, Durgapur, West Bengal 713211",
-                               "A ZONE,DURGAPUR, BARDHAMAN, West Bengal 713204",
-                               "12016, Rtkm/38, Akbar Rd, Prantika, Benachity, Durgapur, West Bengal 713213",
-                               "Pcbl more, Dr Bidhan Chandra Roy Avenue, P.S, Durgapur, West Bengal 713201"]
+            const addresses = ["Petrol Pump Rampur, TAH Rajura Dist, Nagpur, Maharashtra 442905",
+                               "Falkland Road Rajura, Gadchandur Rd, Rampur, Maharashtra 442905",
+                               "Bamni, Chandrapur, MSH-264, Mancherial Nagpur Road, Ballarpur, Ballarpur, Maharashtra 442701",
+                               "Green Park, Khambada, Rajura, Maharashtra 442905",
+                               "RAJURA ROAD, Bamni, Maharashtra 442701"]
             let characters = 'ABCDEFGHIJ'
             document.getElementById("billNo").value = characters.charAt(Math.floor(Math.random() * characters.length)) + (Math.floor(Math.random() * 10000) + 10000);
             let hr = Math.floor(Math.random() * 18 + 5);
             let min = Math.floor(Math.random() * 59);
             let den = getRandomInt(780, 830) + "." + getRandomInt(0, 9) + " Kg/Cu.mtr";
             let [date, time] = new Date(new Date() - Math.random(100) * 2000 * 60 * 60 * 1000).toLocaleString().split(',')
-            let volume = getRandomInt(30, 45) + '.' + getRandomInt(1, 90)
+            let volume = getRandomInt(35, 45) + '.' + getRandomInt(1, 90)
             const address = addresses[Math.floor((Math.random() * 10) % 4)]
             document.getElementById("timeId").value = pad(hr, 2) + ":" + pad(min, 2);
             document.getElementById("localVal").innerHTML = Math.floor(Math.random(10000) * 10000 + Math.random(9) * 1000000);
@@ -257,7 +257,7 @@
                         <span>:</span>
                     </div>
                 </td>
-                <td><span class="right_col" id="rateVal">&#x20B9; 108.42 P/L</span> </td>
+                <td><span class="right_col" id="rateVal">&#x20B9; 92.68 P/L</span> </td>
             </tr>
             <tr height='17' style='height:12.75pt'>
                 <td height='17' style='height:12.75pt;'>
